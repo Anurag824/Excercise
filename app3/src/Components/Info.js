@@ -32,12 +32,16 @@ class Info extends Component {
           <label htmlFor='birthMonth'> Birth Month </label>
           <input type='text' id='birthMonth' onChange={this.handleChange}/> <br />
           <label htmlFor='about'> About </label>
-          <input type='text' id='about' onChange={this.handleChange} /> <br />
+          <textarea id='about' onChange={this.handleChange} > </textarea><br />
           <button> Submit </button>
         </form>
+        {this.state.showname!=="" && this.state.showbirthMonth!=="" && this.state.showabout!=="" &&
+        <div class="display">
         <p>Name: {this.state.showname}</p>
         <p>BirthMonth: {this.state.showbirthMonth}</p>
         <p>About: {this.state.showabout}</p>
+        </div>
+        }
       </div>
     );
   }
